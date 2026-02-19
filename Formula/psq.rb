@@ -5,21 +5,21 @@
 class Psq < Formula
   desc "lightweight postgres monitor for the terminal"
   homepage ""
-  version "1.9.0"
+  version "1.9.1"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/benjaminsanborn/psq/releases/download/v1.9.0/psq_Darwin_x86_64.tar.gz"
-      sha256 "af507a783c4dabe5cdf87926ed7b32b7d1dbc131abb2c78ba796ae0d8dfc6aa5"
+      url "https://github.com/benjaminsanborn/psq/releases/download/v1.9.1/psq_Darwin_x86_64.tar.gz"
+      sha256 "284f98913072cfeaf0336585f489c0e6e2e6718616c368505db08d91a6a75d5d"
 
       def install
         bin.install "psq"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/benjaminsanborn/psq/releases/download/v1.9.0/psq_Darwin_arm64.tar.gz"
-      sha256 "b91dd894dcac64a5b4c9c553dac250e23f7589593a670eefe247137cbd16b343"
+      url "https://github.com/benjaminsanborn/psq/releases/download/v1.9.1/psq_Darwin_arm64.tar.gz"
+      sha256 "768c2c1b6f545569b37f03395aaa65572991acd980c506ccd079f28fd71c4023"
 
       def install
         bin.install "psq"
@@ -29,15 +29,15 @@ class Psq < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/benjaminsanborn/psq/releases/download/v1.9.0/psq_Linux_x86_64.tar.gz"
-      sha256 "f4234d835ab70e4720a643eab4642c13f5116d4136e402785f58d1f06d8812d2"
+      url "https://github.com/benjaminsanborn/psq/releases/download/v1.9.1/psq_Linux_x86_64.tar.gz"
+      sha256 "b5d6a1c64b5d7cce0169e05f41eb4185439aa9098088d40954c1be53a74ce967"
       def install
         bin.install "psq"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/benjaminsanborn/psq/releases/download/v1.9.0/psq_Linux_arm64.tar.gz"
-      sha256 "f2d8f6cee3169f153608ae03297fae4174efcabf6c33434d6ec8722bd8002530"
+      url "https://github.com/benjaminsanborn/psq/releases/download/v1.9.1/psq_Linux_arm64.tar.gz"
+      sha256 "1afe897346685f42e0a79caa351e32888fc48a2bbdb65bd237bbf89f9b37e024"
       def install
         bin.install "psq"
       end
