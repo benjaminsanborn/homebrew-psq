@@ -5,23 +5,23 @@
 class Psq < Formula
   desc "lightweight postgres monitor for the terminal"
   homepage ""
-  version "1.9.3"
+  version "1.10.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/benjaminsanborn/psq/releases/download/v1.9.3/psq_Darwin_x86_64.tar.gz"
-      sha256 "fc7936dabae1996169ca0f54176d6575d228bdeba1c64138074f009d39cc4c2c"
+      url "https://github.com/benjaminsanborn/psq/releases/download/v1.10.0/psq_Darwin_x86_64.tar.gz"
+      sha256 "6fbbc34c575dcce7b8ad4ad2b776541d35506e5f16f938e8324b05ab2228cb12"
 
-      def install
+      define_method(:install) do
         bin.install "psq"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/benjaminsanborn/psq/releases/download/v1.9.3/psq_Darwin_arm64.tar.gz"
-      sha256 "f50634c50e7a2822a48fe2448019c2a53255c8dc55b7535688fc71c6533ab197"
+      url "https://github.com/benjaminsanborn/psq/releases/download/v1.10.0/psq_Darwin_arm64.tar.gz"
+      sha256 "f79dc833db266307176defab663f69e45a5cbd241c367d839971d9196a74373d"
 
-      def install
+      define_method(:install) do
         bin.install "psq"
       end
     end
@@ -29,16 +29,16 @@ class Psq < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/benjaminsanborn/psq/releases/download/v1.9.3/psq_Linux_x86_64.tar.gz"
-      sha256 "b243537f6a2f2abf062ffb3961f737da0aaecb6c9c7d842a5c4fe52f80ac327c"
-      def install
+      url "https://github.com/benjaminsanborn/psq/releases/download/v1.10.0/psq_Linux_x86_64.tar.gz"
+      sha256 "ddd567f2888afbfa1438e115e72f762ac21693145f1e9ec4ea0efda93b82bba9"
+      define_method(:install) do
         bin.install "psq"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/benjaminsanborn/psq/releases/download/v1.9.3/psq_Linux_arm64.tar.gz"
-      sha256 "9e70ce7b0e6247ae6a1f44a2174b218b036ca1200d4393d66580615426ee717c"
-      def install
+      url "https://github.com/benjaminsanborn/psq/releases/download/v1.10.0/psq_Linux_arm64.tar.gz"
+      sha256 "92ad73db423235606a43d1a10dee38b20f08d9bc5e9ae707d3e616e4bcb1a0de"
+      define_method(:install) do
         bin.install "psq"
       end
     end
