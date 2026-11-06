@@ -5,21 +5,21 @@
 class Psq < Formula
   desc "lightweight postgres monitor for the terminal"
   homepage ""
-  version "1.10.2"
+  version "1.11.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/benjaminsanborn/psq/releases/download/v1.10.2/psq_Darwin_x86_64.tar.gz"
-      sha256 "93a01d47b4e3f6eaa52d9125e8745d9b690d4ae0fd0766c854458d29d2bb7c16"
+      url "https://github.com/benjaminsanborn/psq/releases/download/v1.11.0/psq_Darwin_x86_64.tar.gz"
+      sha256 "a392e758ae9c98ed59eed8a03640ab956200b64f6fbd4fd73d530afc5bce03ca"
 
       define_method(:install) do
         bin.install "psq"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/benjaminsanborn/psq/releases/download/v1.10.2/psq_Darwin_arm64.tar.gz"
-      sha256 "51afcbe68c6bc2ddd64fb8d83d00c4429eaad70571d229a06054900a80ccf5b2"
+      url "https://github.com/benjaminsanborn/psq/releases/download/v1.11.0/psq_Darwin_arm64.tar.gz"
+      sha256 "bb08dd45a4835901e994bd441ab6855f40f3a7d426c56dfb0e5f8a2995b7b390"
 
       define_method(:install) do
         bin.install "psq"
@@ -29,15 +29,15 @@ class Psq < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/benjaminsanborn/psq/releases/download/v1.10.2/psq_Linux_x86_64.tar.gz"
-      sha256 "39b9730abdea0bf8b11a07ebee21a412cef00149eca027d5015d681d487b1b62"
+      url "https://github.com/benjaminsanborn/psq/releases/download/v1.11.0/psq_Linux_x86_64.tar.gz"
+      sha256 "fac84669165c50ddb1295a735d1046aab4e971eece633ca7d11d4eca292a09df"
       define_method(:install) do
         bin.install "psq"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/benjaminsanborn/psq/releases/download/v1.10.2/psq_Linux_arm64.tar.gz"
-      sha256 "8d1a338960c376ef4fb1ea136af3b36a53af1eac27902fdef752aff3d3d6170e"
+      url "https://github.com/benjaminsanborn/psq/releases/download/v1.11.0/psq_Linux_arm64.tar.gz"
+      sha256 "10137bbda5fb2806dc71b528a20b1eda9c4e71d9cd250212b5b3e1fb1c037b5d"
       define_method(:install) do
         bin.install "psq"
       end
